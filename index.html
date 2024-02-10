@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./app.css">
+    <title>Document</title>
+</head>
+
+<style>
+    ul {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 650px;
+        list-style: none;
+    }
+
+    ul li img {
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+        transform: translateY(0);
+        transition: all 0.4s ease;
+        object-fit: cover;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    ul li img:hover {
+        transform: translateY(-10px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+    .wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .search {
+        position: absolute;
+        left: 640px;
+    }
+
+    input {
+        width: 250px;
+        padding: 17px 15px 15px 45px;
+        border-radius: 35px;
+        border: solid 2px rgb(122, 121, 121);
+
+    }
+
+    input::placeholder {
+        color: black;
+        font-size: 16px;
+    }
+
+    button {
+        position: absolute;
+        left: 800px;
+        width: 100px;
+        box-sizing: border-box;
+        padding: 17px 15px 17px 15px;
+        border-radius: 35px;
+        cursor: pointer;
+        border: none;
+        background-color: rgb(68, 68, 176);
+        color: rgb(223, 61, 61);
+        font-size: 16px;
+    }
+</style>
+
+<body id="body" class="body">
+    <div class="container">
+
+        <div class="wrap">
+            <img class="search" src="./search-outline.svg" alt="" width="25px">
+            <input type="search" placeholder="Enter something">
+            <button>Search</button>
+        </div>
+
+
+        <ul id="list"></ul>
+    </div>
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
